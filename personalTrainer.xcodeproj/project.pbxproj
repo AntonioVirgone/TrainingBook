@@ -7,18 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91B278F29F7DCB400CFBA0A /* TrainingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */; };
+		F91B279129F7E29700CFBA0A /* ReportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279029F7E29700CFBA0A /* ReportCardView.swift */; };
 		F991340B29E845F800758FAD /* personalTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991340A29E845F800758FAD /* personalTrainerApp.swift */; };
 		F991340D29E845F800758FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991340C29E845F800758FAD /* ContentView.swift */; };
 		F991340F29E845FC00758FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F991340E29E845FC00758FAD /* Assets.xcassets */; };
 		F991341229E845FC00758FAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F991341129E845FC00758FAD /* Preview Assets.xcassets */; };
+		F991341929E84AA800758FAD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991341829E84AA800758FAD /* ProfileView.swift */; };
+		F991341B29E84CE600758FAD /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991341A29E84CE600758FAD /* TrainingView.swift */; };
+		F991342629E85E7600758FAD /* NetworkPackage in Frameworks */ = {isa = PBXBuildFile; productRef = F991342529E85E7600758FAD /* NetworkPackage */; };
+		F991342F29E9811F00758FAD /* TrainerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */; };
+		F991343129E985FE00758FAD /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991343029E985FE00758FAD /* DataController.swift */; };
+		F991343529EE907D00758FAD /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991343429EE907D00758FAD /* PostModel.swift */; };
+		F991343729EE908D00758FAD /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991343629EE908D00758FAD /* CommentModel.swift */; };
+		F991343929EF1DD900758FAD /* scheda_antonio_a.json in Resources */ = {isa = PBXBuildFile; fileRef = F991343829EF1DD900758FAD /* scheda_antonio_a.json */; };
+		F991343D29F6BA2F00758FAD /* scheda_antonio_b.json in Resources */ = {isa = PBXBuildFile; fileRef = F991343C29F6BA2F00758FAD /* scheda_antonio_b.json */; };
+		F991343F29F6BA5D00758FAD /* scheda_antonio_c.json in Resources */ = {isa = PBXBuildFile; fileRef = F991343E29F6BA5D00758FAD /* scheda_antonio_c.json */; };
+		F991344129F6C85A00758FAD /* AddRepetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991344029F6C85A00758FAD /* AddRepetitionView.swift */; };
+		F991344329F6E8CC00758FAD /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991344229F6E8CC00758FAD /* PostCardView.swift */; };
+		F991344529F6ED9400758FAD /* InsertRepetitionDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991344429F6ED9400758FAD /* InsertRepetitionDataView.swift */; };
+		F991344729F7CF5E00758FAD /* FeatureCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991344629F7CF5E00758FAD /* FeatureCardView.swift */; };
+		F991344929F7D26100758FAD /* TrainingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991344829F7D26100758FAD /* TrainingCardView.swift */; };
+		F991344C29F7D47500758FAD /* TrainingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991344B29F7D47500758FAD /* TrainingRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataController.swift; sourceTree = "<group>"; };
+		F91B279029F7E29700CFBA0A /* ReportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCardView.swift; sourceTree = "<group>"; };
 		F991340729E845F800758FAD /* personalTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = personalTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F991340A29E845F800758FAD /* personalTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalTrainerApp.swift; sourceTree = "<group>"; };
 		F991340C29E845F800758FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F991340E29E845FC00758FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F991341129E845FC00758FAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F991341829E84AA800758FAD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F991341A29E84CE600758FAD /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		F991342E29E9811F00758FAD /* TrainerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrainerDataModel.xcdatamodel; sourceTree = "<group>"; };
+		F991343029E985FE00758FAD /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		F991343429EE907D00758FAD /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		F991343629EE908D00758FAD /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		F991343829EF1DD900758FAD /* scheda_antonio_a.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scheda_antonio_a.json; sourceTree = "<group>"; };
+		F991343C29F6BA2F00758FAD /* scheda_antonio_b.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scheda_antonio_b.json; sourceTree = "<group>"; };
+		F991343E29F6BA5D00758FAD /* scheda_antonio_c.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scheda_antonio_c.json; sourceTree = "<group>"; };
+		F991344029F6C85A00758FAD /* AddRepetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRepetitionView.swift; sourceTree = "<group>"; };
+		F991344229F6E8CC00758FAD /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
+		F991344429F6ED9400758FAD /* InsertRepetitionDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertRepetitionDataView.swift; sourceTree = "<group>"; };
+		F991344629F7CF5E00758FAD /* FeatureCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCardView.swift; sourceTree = "<group>"; };
+		F991344829F7D26100758FAD /* TrainingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCardView.swift; sourceTree = "<group>"; };
+		F991344B29F7D47500758FAD /* TrainingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +61,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F991342629E85E7600758FAD /* NetworkPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F91B279229F7E31D00CFBA0A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F991340C29E845F800758FAD /* ContentView.swift */,
+				F991344629F7CF5E00758FAD /* FeatureCardView.swift */,
+				F991344829F7D26100758FAD /* TrainingCardView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F91B279329F7E34600CFBA0A /* AddRepetition */ = {
+			isa = PBXGroup;
+			children = (
+				F991344029F6C85A00758FAD /* AddRepetitionView.swift */,
+				F991344229F6E8CC00758FAD /* PostCardView.swift */,
+				F991344429F6ED9400758FAD /* InsertRepetitionDataView.swift */,
+				F91B279029F7E29700CFBA0A /* ReportCardView.swift */,
+			);
+			path = AddRepetition;
+			sourceTree = "<group>";
+		};
+		F91B279429F7E35900CFBA0A /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				F991341A29E84CE600758FAD /* TrainingView.swift */,
+				F991344B29F7D47500758FAD /* TrainingRowView.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
 		F99133FE29E845F800758FAD = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +117,12 @@
 		F991340929E845F800758FAD /* personalTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				F991343329EE906D00758FAD /* Model */,
+				F991343229EE905E00758FAD /* ViewModel */,
+				F991342929E93DD100758FAD /* DataModel */,
+				F991341F29E85C2600758FAD /* resource */,
 				F991340A29E845F800758FAD /* personalTrainerApp.swift */,
-				F991340C29E845F800758FAD /* ContentView.swift */,
+				F991344A29F7D32500758FAD /* View */,
 				F991340E29E845FC00758FAD /* Assets.xcassets */,
 				F991341029E845FC00758FAD /* Preview Content */,
 			);
@@ -65,6 +135,53 @@
 				F991341129E845FC00758FAD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F991341F29E85C2600758FAD /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				F991343829EF1DD900758FAD /* scheda_antonio_a.json */,
+				F991343C29F6BA2F00758FAD /* scheda_antonio_b.json */,
+				F991343E29F6BA5D00758FAD /* scheda_antonio_c.json */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		F991342929E93DD100758FAD /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */,
+				F991343029E985FE00758FAD /* DataController.swift */,
+				F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		F991343229EE905E00758FAD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F991343329EE906D00758FAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F991343429EE907D00758FAD /* PostModel.swift */,
+				F991343629EE908D00758FAD /* CommentModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F991344A29F7D32500758FAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F991341829E84AA800758FAD /* ProfileView.swift */,
+				F91B279229F7E31D00CFBA0A /* Home */,
+				F91B279429F7E35900CFBA0A /* Training */,
+				F91B279329F7E34600CFBA0A /* AddRepetition */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +200,9 @@
 			dependencies = (
 			);
 			name = personalTrainer;
+			packageProductDependencies = (
+				F991342529E85E7600758FAD /* NetworkPackage */,
+			);
 			productName = personalTrainer;
 			productReference = F991340729E845F800758FAD /* personalTrainer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +231,9 @@
 				Base,
 			);
 			mainGroup = F99133FE29E845F800758FAD;
+			packageReferences = (
+				F991342429E85E7600758FAD /* XCRemoteSwiftPackageReference "NetworkPackage" */,
+			);
 			productRefGroup = F991340829E845F800758FAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F991341229E845FC00758FAD /* Preview Assets.xcassets in Resources */,
+				F991343F29F6BA5D00758FAD /* scheda_antonio_c.json in Resources */,
+				F991343D29F6BA2F00758FAD /* scheda_antonio_b.json in Resources */,
+				F991343929EF1DD900758FAD /* scheda_antonio_a.json in Resources */,
 				F991340F29E845FC00758FAD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +263,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91B279129F7E29700CFBA0A /* ReportCardView.swift in Sources */,
+				F991341B29E84CE600758FAD /* TrainingView.swift in Sources */,
+				F991343729EE908D00758FAD /* CommentModel.swift in Sources */,
+				F991344329F6E8CC00758FAD /* PostCardView.swift in Sources */,
+				F991344C29F7D47500758FAD /* TrainingRowView.swift in Sources */,
+				F91B278F29F7DCB400CFBA0A /* TrainingDataController.swift in Sources */,
+				F991344529F6ED9400758FAD /* InsertRepetitionDataView.swift in Sources */,
+				F991344129F6C85A00758FAD /* AddRepetitionView.swift in Sources */,
+				F991342F29E9811F00758FAD /* TrainerDataModel.xcdatamodeld in Sources */,
 				F991340D29E845F800758FAD /* ContentView.swift in Sources */,
+				F991343529EE907D00758FAD /* PostModel.swift in Sources */,
+				F991343129E985FE00758FAD /* DataController.swift in Sources */,
+				F991341929E84AA800758FAD /* ProfileView.swift in Sources */,
 				F991340B29E845F800758FAD /* personalTrainerApp.swift in Sources */,
+				F991344929F7D26100758FAD /* TrainingCardView.swift in Sources */,
+				F991344729F7CF5E00758FAD /* FeatureCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +479,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F991342429E85E7600758FAD /* XCRemoteSwiftPackageReference "NetworkPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AntonioVirgone/NetworkPackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F991342529E85E7600758FAD /* NetworkPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F991342429E85E7600758FAD /* XCRemoteSwiftPackageReference "NetworkPackage" */;
+			productName = NetworkPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F991342E29E9811F00758FAD /* TrainerDataModel.xcdatamodel */,
+			);
+			currentVersion = F991342E29E9811F00758FAD /* TrainerDataModel.xcdatamodel */;
+			path = TrainerDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F99133FF29E845F800758FAD /* Project object */;
 }

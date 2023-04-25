@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct personalTrainerApp: App {
+    @StateObject private var dataController = DataController()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ProfileView().environment(\.managedObjectContext, dataController.container.viewContext)
+            ContentView().environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
