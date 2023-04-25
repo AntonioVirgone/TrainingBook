@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F91B278F29F7DCB400CFBA0A /* TrainingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */; };
 		F91B279129F7E29700CFBA0A /* ReportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279029F7E29700CFBA0A /* ReportCardView.swift */; };
+		F91B279629F8218C00CFBA0A /* EditRepetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279529F8218C00CFBA0A /* EditRepetitionView.swift */; };
 		F991340B29E845F800758FAD /* personalTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991340A29E845F800758FAD /* personalTrainerApp.swift */; };
 		F991340D29E845F800758FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991340C29E845F800758FAD /* ContentView.swift */; };
 		F991340F29E845FC00758FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F991340E29E845FC00758FAD /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataController.swift; sourceTree = "<group>"; };
 		F91B279029F7E29700CFBA0A /* ReportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCardView.swift; sourceTree = "<group>"; };
+		F91B279529F8218C00CFBA0A /* EditRepetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRepetitionView.swift; sourceTree = "<group>"; };
 		F991340729E845F800758FAD /* personalTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = personalTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F991340A29E845F800758FAD /* personalTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalTrainerApp.swift; sourceTree = "<group>"; };
 		F991340C29E845F800758FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				F991344229F6E8CC00758FAD /* PostCardView.swift */,
 				F991344429F6ED9400758FAD /* InsertRepetitionDataView.swift */,
 				F91B279029F7E29700CFBA0A /* ReportCardView.swift */,
+				F91B279529F8218C00CFBA0A /* EditRepetitionView.swift */,
 			);
 			path = AddRepetition;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				F991343129E985FE00758FAD /* DataController.swift in Sources */,
 				F991341929E84AA800758FAD /* ProfileView.swift in Sources */,
 				F991340B29E845F800758FAD /* personalTrainerApp.swift in Sources */,
+				F91B279629F8218C00CFBA0A /* EditRepetitionView.swift in Sources */,
 				F991344929F7D26100758FAD /* TrainingCardView.swift in Sources */,
 				F991344729F7CF5E00758FAD /* FeatureCardView.swift in Sources */,
 			);

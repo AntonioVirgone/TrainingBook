@@ -31,13 +31,26 @@ class DataController: ObservableObject {
         save(context: context)
     }
     
-    func editRepetition(repetition: Repetition, number: Double, weigth: Double, trainingCode: String, context: NSManagedObjectContext) {
-        repetition.date = Date()
-        repetition.number = number
-        repetition.weigth = weigth
-        repetition.trainingCode = trainingCode
+    func editRepetition(number: Double, weigth: Double, repetitionId: UUID, context: NSManagedObjectContext) {
+        let fetchRequest: NSFetchRequest<Repetition>
+        fetchRequest = Repetition.fetchRequest()
+        
+        print(repetitionId)
 
-        save(context: context)
+        fetchRequest.predicate = NSPredicate(
+            format: "id = '\(repetitionId)'"
+        )
+
+        do {
+            let repetition = try context.fetch(fetchRequest).first
+            
+            repetition!.number = number
+            repetition!.weigth = weigth
+            
+            save(context: context)
+        } catch {
+            print(error)
+        }
     }
     
     func save(context: NSManagedObjectContext) {

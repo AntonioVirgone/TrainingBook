@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct PostCardView: View {
-    let color: Color
     let profileName: String
     let datetime: String
     let description: String
     
+    let bgColor = Color(#colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1843137255, alpha: 1))
+
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -33,13 +34,13 @@ struct PostCardView: View {
             .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 0))
             Spacer()
         }
-        .background(color)
+        .background(bgColor)
         .cornerRadius(15)
     }
 }
 
 struct PostCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PostCardView(color: .green, profileName: "Antonio", datetime: "4/24/2023, 6:41 PM", description: "54 kg")
+        PostCardView(profileName: "Antonio", datetime: "4/24/2023, 6:41 PM", description: "54 kg")
     }
 }

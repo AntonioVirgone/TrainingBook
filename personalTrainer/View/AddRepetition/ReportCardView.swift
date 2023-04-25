@@ -11,8 +11,9 @@ struct ReportCardView: View {
     let count: Int
     let title: String
     let textColor: Color
-    let bgColor: Color
     
+    let bgColor = Color(#colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1843137255, alpha: 1))
+
     var body: some View {
         VStack(spacing: 10) {
             Text("\(count)")
@@ -33,7 +34,6 @@ struct ReportCardView_Previews: PreviewProvider {
     static var previews: some View {
         ReportCardView(count: 2,
                        title: "Tempo",
-                       textColor: Color.white,
-                       bgColor: Color.black)
+                       textColor: Color.white)
     }
 }

@@ -11,13 +11,16 @@ struct InsertRepetitionDataView: View {
     @Environment(\.managedObjectContext) var manageObjectContext
     @Environment(\.dismiss) var dismiss
 
-    @State private var number:Double = 0
-    @State private var weigth: Double = 0
-    @State private var bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
+    @State var number: Double = 0
+    @State var weigth: Double = 0
+    
+    private let bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
+    private let color1 = #colorLiteral(red: 1, green: 0.4901960784, blue: 0.1215686275, alpha: 1)
+    private let color2 = #colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1843137255, alpha: 1)
 
-    let color1 = #colorLiteral(red: 1, green: 0.4901960784, blue: 0.1215686275, alpha: 1)
-    let color2 = #colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1843137255, alpha: 1)
-
+    var repetitionId = UUID()
+    
+    let isEditMode: Bool
     let title: String
     let isActiveAddWeight: Bool
     let exerciseCode: String
@@ -25,6 +28,11 @@ struct InsertRepetitionDataView: View {
     var body: some View {
         VStack {
             VStack {
+                if isEditMode {
+                    Text(title)
+                        .font(.system(size: 26, weight: .bold, design: .rounded))
+                        .padding()
+                }
                 Text("Ripetizioni: \(Int(number))")
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                 Slider(value: $number, in: 0...60, step: 1)
@@ -41,8 +49,12 @@ struct InsertRepetitionDataView: View {
             HStack {
                 Spacer()
                 Button {
-                    DataController().addRepetition(number: number, weigth: weigth, trainingCode: exerciseCode, context: manageObjectContext)
-                    dismiss()
+                    if isEditMode {
+                        DataController().editRepetition(number: number, weigth: weigth, repetitionId: repetitionId, context: manageObjectContext)
+                        dismiss()
+                    } else {
+                        DataController().addRepetition(number: number, weigth: weigth, trainingCode: exerciseCode, context: manageObjectContext)
+                    }
                 } label: {
                     Text("Save")
                         .font(.system(size: 26, weight: .bold, design: .rounded))
@@ -80,6 +92,6 @@ struct InsertRepetitionDataView: View {
 
 struct InsertRepetitionDataView_Previews: PreviewProvider {
     static var previews: some View {
-        InsertRepetitionDataView(title: "title", isActiveAddWeight: true, exerciseCode: "code")
+        InsertRepetitionDataView(isEditMode: true, title: "title", isActiveAddWeight: true, exerciseCode: "code")
     }
 }
