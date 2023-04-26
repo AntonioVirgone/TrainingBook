@@ -18,7 +18,7 @@
 		F991341B29E84CE600758FAD /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991341A29E84CE600758FAD /* TrainingView.swift */; };
 		F991342629E85E7600758FAD /* NetworkPackage in Frameworks */ = {isa = PBXBuildFile; productRef = F991342529E85E7600758FAD /* NetworkPackage */; };
 		F991342F29E9811F00758FAD /* TrainerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */; };
-		F991343129E985FE00758FAD /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991343029E985FE00758FAD /* DataController.swift */; };
+		F991343129E985FE00758FAD /* RepetitionDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991343029E985FE00758FAD /* RepetitionDataController.swift */; };
 		F991343529EE907D00758FAD /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991343429EE907D00758FAD /* PostModel.swift */; };
 		F991343729EE908D00758FAD /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991343629EE908D00758FAD /* CommentModel.swift */; };
 		F991343929EF1DD900758FAD /* scheda_antonio_a.json in Resources */ = {isa = PBXBuildFile; fileRef = F991343829EF1DD900758FAD /* scheda_antonio_a.json */; };
@@ -44,7 +44,7 @@
 		F991341829E84AA800758FAD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F991341A29E84CE600758FAD /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		F991342E29E9811F00758FAD /* TrainerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrainerDataModel.xcdatamodel; sourceTree = "<group>"; };
-		F991343029E985FE00758FAD /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		F991343029E985FE00758FAD /* RepetitionDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionDataController.swift; sourceTree = "<group>"; };
 		F991343429EE907D00758FAD /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		F991343629EE908D00758FAD /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		F991343829EF1DD900758FAD /* scheda_antonio_a.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scheda_antonio_a.json; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */,
-				F991343029E985FE00758FAD /* DataController.swift */,
+				F991343029E985FE00758FAD /* RepetitionDataController.swift */,
 				F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */,
 			);
 			path = DataModel;
@@ -277,7 +277,7 @@
 				F991342F29E9811F00758FAD /* TrainerDataModel.xcdatamodeld in Sources */,
 				F991340D29E845F800758FAD /* ContentView.swift in Sources */,
 				F991343529EE907D00758FAD /* PostModel.swift in Sources */,
-				F991343129E985FE00758FAD /* DataController.swift in Sources */,
+				F991343129E985FE00758FAD /* RepetitionDataController.swift in Sources */,
 				F991341929E84AA800758FAD /* ProfileView.swift in Sources */,
 				F991340B29E845F800758FAD /* personalTrainerApp.swift in Sources */,
 				F91B279629F8218C00CFBA0A /* EditRepetitionView.swift in Sources */,

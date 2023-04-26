@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct personalTrainerApp: App {
-    @StateObject private var dataController = DataController()
+    @StateObject private var dataController = RepetitionDataController()
 
     var body: some Scene {
         WindowGroup {

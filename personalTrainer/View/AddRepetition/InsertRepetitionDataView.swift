@@ -50,10 +50,10 @@ struct InsertRepetitionDataView: View {
                 Spacer()
                 Button {
                     if isEditMode {
-                        DataController().editRepetition(number: number, weigth: weigth, repetitionId: repetitionId, context: manageObjectContext)
+                        RepetitionDataController().editRepetition(number: number, weigth: weigth, repetitionId: repetitionId, context: manageObjectContext)
                         dismiss()
                     } else {
-                        DataController().addRepetition(number: number, weigth: weigth, trainingCode: exerciseCode, context: manageObjectContext)
+                        RepetitionDataController().addRepetition(number: number, weigth: weigth, trainingCode: exerciseCode, context: manageObjectContext)
                     }
                 } label: {
                     Text("Save")

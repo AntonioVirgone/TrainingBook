@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class DataController: ObservableObject {
+class RepetitionDataController: ObservableObject {
     let container = NSPersistentContainer(name: "TrainerDataModel")
     
     init() {
@@ -29,6 +29,17 @@ class DataController: ObservableObject {
         repetition.trainingCode = trainingCode
         
         save(context: context)
+    }
+    
+    func find(context: NSManagedObjectContext) -> [Repetition] {
+        let fetchRequest: NSFetchRequest<Repetition>
+        fetchRequest = Repetition.fetchRequest()
+        
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            return []
+        }
     }
     
     func editRepetition(number: Double, weigth: Double, repetitionId: UUID, context: NSManagedObjectContext) {
@@ -53,47 +64,29 @@ class DataController: ObservableObject {
         }
     }
     
-    func save(context: NSManagedObjectContext) {
-        do {
-            try context.save()
-            print("Data saved")
-        } catch {
-            print("Error in save data")
-        }
-    }
-}
-    /*
-    func save(context: NSManagedObjectContext) {
-        do {
-            try context.save()
-            print("Data saved")
-        } catch {
-            print("Error in save data")
-        }
-    }
-    
-    
-    
-    // USER
-    func addUser(username: String, password: String, avatar: String, admin: Bool, context: NSManagedObjectContext) {
-        let user = User(context: context)
-        user.id = UUID()
-        user.username = username
-        user.password = password
-        user.avatar = avatar
-        user.admin = admin
+    func deleteRepetition(repetitionId: UUID, context: NSManagedObjectContext) {
+        let fetchRequest = Repetition.fetchRequest()
         
-        save(context: context)
+        fetchRequest.predicate = NSPredicate(
+            format: "id = '\(repetitionId)'"
+        )
+
+        do {
+            let repetition = try context.fetch(fetchRequest).first
+            context.delete(repetition!)
+            
+            save(context: context)
+        } catch {
+            print(error)
+        }
     }
     
-    func editUser(user: User, username: String, password: String, avatar: String, admin: Bool, context: NSManagedObjectContext) {
-        user.username = username
-        user.password = password
-        user.avatar = avatar
-        user.admin = admin
-
-        save(context: context)
+    func save(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+            print("Data saved")
+        } catch {
+            print("Error in save data")
+        }
     }
 }
-
-*/

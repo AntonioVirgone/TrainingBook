@@ -16,9 +16,6 @@ struct AddRepetitionView: View {
     @State private var number:Double = 0
     @State private var weigth: Double = 0
     @State private var bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
-    
-    @State private var showingAlert = false
-    @State private var name = ""
         
     let colorBar: Color
     let title: String
@@ -44,9 +41,10 @@ struct AddRepetitionView: View {
     }
     
     private func deleteRepetition(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { repetitions[$0] }.forEach(manageObjectContext.delete)
-            DataController().save(context: manageObjectContext)
+        _ = withAnimation {
+            offsets.map {
+                RepetitionDataController().deleteRepetition(repetitionId: repetitions[$0].id!, context: manageObjectContext)
+            }
         }
     }
     
