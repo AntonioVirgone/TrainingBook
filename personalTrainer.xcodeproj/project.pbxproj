@@ -130,21 +130,6 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		F91B27A429FA4F7200CFBA0A /* Trainer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Trainer;
-			sourceTree = "<group>";
-		};
-		F91B27A529FA4F8600CFBA0A /* Food */ = {
-			isa = PBXGroup;
-			children = (
-				F91B27A129FA4F6200CFBA0A /* FoodDataModel.xcdatamodeld */,
-			);
-			path = Food;
-			sourceTree = "<group>";
-		};
 		F99133FE29E845F800758FAD = {
 			isa = PBXGroup;
 			children = (
@@ -197,11 +182,10 @@
 		F991342929E93DD100758FAD /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				F91B27A129FA4F6200CFBA0A /* FoodDataModel.xcdatamodeld */,
 				F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */,
 				F991343029E985FE00758FAD /* RepetitionDataController.swift */,
 				F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */,
-				F91B27A529FA4F8600CFBA0A /* Food */,
-				F91B27A429FA4F7200CFBA0A /* Trainer */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
