@@ -46,8 +46,6 @@ class RepetitionDataController: ObservableObject {
         let fetchRequest: NSFetchRequest<Repetition>
         fetchRequest = Repetition.fetchRequest()
         
-        print(repetitionId)
-
         fetchRequest.predicate = NSPredicate(
             format: "id = '\(repetitionId)'"
         )

@@ -10,6 +10,11 @@
 		F91B278F29F7DCB400CFBA0A /* TrainingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */; };
 		F91B279129F7E29700CFBA0A /* ReportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279029F7E29700CFBA0A /* ReportCardView.swift */; };
 		F91B279629F8218C00CFBA0A /* EditRepetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279529F8218C00CFBA0A /* EditRepetitionView.swift */; };
+		F91B279929F904CB00CFBA0A /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279829F904CB00CFBA0A /* CounterView.swift */; };
+		F91B279B29F904FF00CFBA0A /* RelaxButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279A29F904FF00CFBA0A /* RelaxButtonView.swift */; };
+		F91B279E29F9666B00CFBA0A /* FoodDiaryFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279D29F9666B00CFBA0A /* FoodDiaryFeatureView.swift */; };
+		F91B27A029FA4B3000CFBA0A /* MealSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B279F29FA4B3000CFBA0A /* MealSelectorView.swift */; };
+		F91B27A329FA4F6200CFBA0A /* FoodDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91B27A129FA4F6200CFBA0A /* FoodDataModel.xcdatamodeld */; };
 		F991340B29E845F800758FAD /* personalTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991340A29E845F800758FAD /* personalTrainerApp.swift */; };
 		F991340D29E845F800758FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991340C29E845F800758FAD /* ContentView.swift */; };
 		F991340F29E845FC00758FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F991340E29E845FC00758FAD /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 		F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataController.swift; sourceTree = "<group>"; };
 		F91B279029F7E29700CFBA0A /* ReportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCardView.swift; sourceTree = "<group>"; };
 		F91B279529F8218C00CFBA0A /* EditRepetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRepetitionView.swift; sourceTree = "<group>"; };
+		F91B279829F904CB00CFBA0A /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		F91B279A29F904FF00CFBA0A /* RelaxButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxButtonView.swift; sourceTree = "<group>"; };
+		F91B279D29F9666B00CFBA0A /* FoodDiaryFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryFeatureView.swift; sourceTree = "<group>"; };
+		F91B279F29FA4B3000CFBA0A /* MealSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSelectorView.swift; sourceTree = "<group>"; };
+		F91B27A229FA4F6200CFBA0A /* FoodDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F991340729E845F800758FAD /* personalTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = personalTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F991340A29E845F800758FAD /* personalTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalTrainerApp.swift; sourceTree = "<group>"; };
 		F991340C29E845F800758FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +93,7 @@
 		F91B279329F7E34600CFBA0A /* AddRepetition */ = {
 			isa = PBXGroup;
 			children = (
+				F91B279729F904BE00CFBA0A /* timer */,
 				F991344029F6C85A00758FAD /* AddRepetitionView.swift */,
 				F991344229F6E8CC00758FAD /* PostCardView.swift */,
 				F991344429F6ED9400758FAD /* InsertRepetitionDataView.swift */,
@@ -99,6 +110,39 @@
 				F991344B29F7D47500758FAD /* TrainingRowView.swift */,
 			);
 			path = Training;
+			sourceTree = "<group>";
+		};
+		F91B279729F904BE00CFBA0A /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				F91B279829F904CB00CFBA0A /* CounterView.swift */,
+				F91B279A29F904FF00CFBA0A /* RelaxButtonView.swift */,
+			);
+			path = timer;
+			sourceTree = "<group>";
+		};
+		F91B279C29F9665900CFBA0A /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				F91B279D29F9666B00CFBA0A /* FoodDiaryFeatureView.swift */,
+				F91B279F29FA4B3000CFBA0A /* MealSelectorView.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		F91B27A429FA4F7200CFBA0A /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Trainer;
+			sourceTree = "<group>";
+		};
+		F91B27A529FA4F8600CFBA0A /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				F91B27A129FA4F6200CFBA0A /* FoodDataModel.xcdatamodeld */,
+			);
+			path = Food;
 			sourceTree = "<group>";
 		};
 		F99133FE29E845F800758FAD = {
@@ -156,6 +200,8 @@
 				F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */,
 				F991343029E985FE00758FAD /* RepetitionDataController.swift */,
 				F91B278E29F7DCB400CFBA0A /* TrainingDataController.swift */,
+				F91B27A529FA4F8600CFBA0A /* Food */,
+				F91B27A429FA4F7200CFBA0A /* Trainer */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -182,6 +228,7 @@
 				F991341829E84AA800758FAD /* ProfileView.swift */,
 				F91B279229F7E31D00CFBA0A /* Home */,
 				F91B279429F7E35900CFBA0A /* Training */,
+				F91B279C29F9665900CFBA0A /* Feature */,
 				F91B279329F7E34600CFBA0A /* AddRepetition */,
 			);
 			path = View;
@@ -275,14 +322,19 @@
 				F991344529F6ED9400758FAD /* InsertRepetitionDataView.swift in Sources */,
 				F991344129F6C85A00758FAD /* AddRepetitionView.swift in Sources */,
 				F991342F29E9811F00758FAD /* TrainerDataModel.xcdatamodeld in Sources */,
+				F91B27A329FA4F6200CFBA0A /* FoodDataModel.xcdatamodeld in Sources */,
 				F991340D29E845F800758FAD /* ContentView.swift in Sources */,
 				F991343529EE907D00758FAD /* PostModel.swift in Sources */,
+				F91B279E29F9666B00CFBA0A /* FoodDiaryFeatureView.swift in Sources */,
 				F991343129E985FE00758FAD /* RepetitionDataController.swift in Sources */,
 				F991341929E84AA800758FAD /* ProfileView.swift in Sources */,
 				F991340B29E845F800758FAD /* personalTrainerApp.swift in Sources */,
+				F91B279B29F904FF00CFBA0A /* RelaxButtonView.swift in Sources */,
 				F91B279629F8218C00CFBA0A /* EditRepetitionView.swift in Sources */,
 				F991344929F7D26100758FAD /* TrainingCardView.swift in Sources */,
 				F991344729F7CF5E00758FAD /* FeatureCardView.swift in Sources */,
+				F91B279929F904CB00CFBA0A /* CounterView.swift in Sources */,
+				F91B27A029FA4B3000CFBA0A /* MealSelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +556,16 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+		F91B27A129FA4F6200CFBA0A /* FoodDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F91B27A229FA4F6200CFBA0A /* FoodDataModel.xcdatamodel */,
+			);
+			currentVersion = F91B27A229FA4F6200CFBA0A /* FoodDataModel.xcdatamodel */;
+			path = FoodDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		F991342D29E9811F00758FAD /* TrainerDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

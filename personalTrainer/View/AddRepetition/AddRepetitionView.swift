@@ -16,11 +16,12 @@ struct AddRepetitionView: View {
     @State private var number:Double = 0
     @State private var weigth: Double = 0
     @State private var bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
-        
+    
     let colorBar: Color
     let title: String
     let isActiveAddWeight: Bool
     let exerciseCode: String
+    let relaxCounter: Int
     
     var body: some View {
         ZStack {
@@ -30,6 +31,9 @@ struct AddRepetitionView: View {
                     .frame(height: 0)
                     .background(colorBar.opacity(0.4))
                 InsertRepetitionDataView(isEditMode:false, title: title, isActiveAddWeight: isActiveAddWeight, exerciseCode: exerciseCode)
+                Spacer()
+                    .frame(height: 40)
+                RelaxButtonView(counter: relaxCounter)
                 Spacer()
                     .frame(height: 40)
                 reportList
@@ -57,11 +61,47 @@ struct AddRepetitionView: View {
         }
         return count
     }
+    
+    private func calculateMiddleweight() -> Int {
+        var middle = 0
+        if repetitions.count > 0 {
+            for repetition in repetitions {
+                if exerciseCode == repetition.trainingCode {
+                    middle += Int(repetition.weigth)
+                }
+            }
+            return middle / repetitions.count
+        }
+        return middle
+    }
+    
+    private func calculateMiddlerepetition() -> Int {
+        var middle = 0
+        if repetitions.count > 0 {
+            for repetition in repetitions {
+                if exerciseCode == repetition.trainingCode {
+                    middle += Int(repetition.number)
+                }
+            }
+            return middle / repetitions.count
+        }
+        return middle
+    }
+    
+    private func calculateMiddleexecution() -> Int {
+        var middle = 0
+        for repetition in repetitions {
+            if exerciseCode == repetition.trainingCode {
+                middle += 1
+            }
+        }
+        return middle
+    }
 }
 
 struct AddRepetitionView_Previews: PreviewProvider {
     static var previews: some View {
-        AddRepetitionView(colorBar: .red, title: "title", isActiveAddWeight: true, exerciseCode: "code")
+        AddRepetitionView(colorBar: .red, title: "title", isActiveAddWeight: true, exerciseCode: "code", relaxCounter: 10)
     }
 }
 
@@ -72,14 +112,14 @@ extension AddRepetitionView {
                 .font(.system(size: 14, weight: .medium, design: .rounded))
                 .foregroundColor(.white)
             HStack {
-                ReportCardView(count: 32,
+                ReportCardView(count: calculateMiddleweight(),
                                title: "Peso",
                                textColor: Color.white)
-                ReportCardView(count: 15,
+                ReportCardView(count: calculateMiddlerepetition(),
                                title: "Ripetizioni",
                                textColor: Color.white)
-                ReportCardView(count: 2,
-                               title: "Tempo",
+                ReportCardView(count: calculateMiddleexecution(),
+                               title: "Volte",
                                textColor: Color.white)
             }
         }

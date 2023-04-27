@@ -11,7 +11,7 @@ import NetworkPackage
 struct TrainingView: View {
     @FetchRequest(sortDescriptors: []) var posts: FetchedResults<Scheda>
     
-    @State var bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
+    let bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
 
     let title: String
     let type: String
@@ -34,7 +34,8 @@ struct TrainingView: View {
                                                     isActiveAddRepetition: comment.addRepetion,
                                                     isActiveAddWeight: comment.addWeigth,
                                                     bgAppColor: bgAppColor,
-                                                    color: color)
+                                                    color: color,
+                                                    relaxCounter: Int(comment.riposo))
                                 }
                             }
                             .font(.system(size: 16))

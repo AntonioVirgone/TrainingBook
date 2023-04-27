@@ -14,6 +14,7 @@ struct TrainingRowView: View {
     let isActiveAddWeight: Bool
     let bgAppColor: Color
     let color: Color
+    let relaxCounter: Int
 
     var body: some View {
         if (isActiveAddRepetition) {
@@ -26,13 +27,13 @@ struct TrainingRowView: View {
 
 struct TrainingRowView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingRowView(title: "title", exerciseCode: "code", isActiveAddRepetition: true, isActiveAddWeight: true, bgAppColor: .red, color: .orange)
+        TrainingRowView(title: "title", exerciseCode: "code", isActiveAddRepetition: true, isActiveAddWeight: true, bgAppColor: .red, color: .orange, relaxCounter: 10)
     }
 }
 
 extension TrainingRowView {
     private var navigationRow: some View {
-        NavigationLink(destination: AddRepetitionView(colorBar: color, title: title, isActiveAddWeight: isActiveAddWeight, exerciseCode: exerciseCode)) {
+        NavigationLink(destination: AddRepetitionView(colorBar: color, title: title, isActiveAddWeight: isActiveAddWeight, exerciseCode: exerciseCode, relaxCounter: relaxCounter)) {
             Text(title)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundColor(.black)

@@ -19,7 +19,14 @@ struct EditRepetitionView: View {
     var body: some View {
         ZStack {
             bgAppColor.edgesIgnoringSafeArea(.all)
-            InsertRepetitionDataView(number: number, weigth: weigth, repetitionId: repetitionId, isEditMode: true, title: title, isActiveAddWeight: isActiveAddWeight, exerciseCode: "")
+            VStack {
+                Rectangle()
+                    .frame(height: 0)
+                    .background(colorBar.opacity(0.4))
+                Spacer()
+                InsertRepetitionDataView(number: number, weigth: weigth, repetitionId: repetitionId, isEditMode: true, title: title, isActiveAddWeight: isActiveAddWeight, exerciseCode: "")
+                Spacer()
+            }
         }
     }
 }

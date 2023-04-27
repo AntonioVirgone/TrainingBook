@@ -62,8 +62,7 @@ struct InsertRepetitionDataView: View {
                         .frame(width: 130, height: 50)
                         .background(Color(color1))
                         .cornerRadius(10)
-                        .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))
-                    
+                        .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))                    
                 }
                 Spacer()
                 Button {
