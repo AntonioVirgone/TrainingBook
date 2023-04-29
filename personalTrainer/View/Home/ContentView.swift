@@ -96,7 +96,8 @@ extension ContentView {
                 .foregroundColor(.white)
             VStack {
                 HStack {
-                    NavigationLink(destination: MealDiaryFeatureView().toolbarRole(.editor)) {          FeatureCardView(title: "Diario cibo", count: "frying.pan", description: "", color: bgCardColor)
+                    NavigationLink(destination: MealDiaryFeatureView().toolbarRole(.editor)) {
+                        FeatureCardView(title: "Diario cibo", count: "frying.pan", description: "", color: bgCardColor)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 8))
                     }
                        

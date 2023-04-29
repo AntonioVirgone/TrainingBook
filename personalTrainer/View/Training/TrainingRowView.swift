@@ -15,6 +15,8 @@ struct TrainingRowView: View {
     let bgAppColor: Color
     let color: Color
     let relaxCounter: Int
+    
+    let exercize: CommentModel
 
     var body: some View {
         if (isActiveAddRepetition) {
@@ -27,7 +29,20 @@ struct TrainingRowView: View {
 
 struct TrainingRowView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingRowView(title: "title", exerciseCode: "code", isActiveAddRepetition: true, isActiveAddWeight: true, bgAppColor: .red, color: .orange, relaxCounter: 10)
+        TrainingRowView(title: "title",
+                        exerciseCode: "code",
+                        isActiveAddRepetition: true,
+                        isActiveAddWeight: true,
+                        bgAppColor: Color.red,
+                        color: Color.orange,
+                        relaxCounter: 10,
+                        exercize: CommentModel(code: "",
+                                               value: "",
+                                               serie: 10,
+                                               ripetizioni: 10,
+                                               riposo: 10,
+                                               addRepetition: true,
+                                               addWeigth: true))
     }
 }
 

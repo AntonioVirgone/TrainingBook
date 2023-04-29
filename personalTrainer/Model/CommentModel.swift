@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct CommentModel: Identifiable, Hashable, Codable {
-    let id = UUID()
+struct CommentModel: Hashable, Codable {
     let code: String?
     let value: String
     let serie: Int?

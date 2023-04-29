@@ -23,17 +23,18 @@ struct TrainingView: View {
                     .frame(height: 0)
                     .background(color.opacity(0.4))
                 List {
-                    ForEach(posts) { post in
+                    ForEach(posts, id: \.self) { post in
                         if (post.type == type) {
-                            Section(header: Text(post.title ?? "").foregroundColor(.white)) {
+                            Section(header: Text(post.title).foregroundColor(.white)) {
                                 ForEach(post.excercises, id: \.self) { comment in
-                                    TrainingRowView(title: comment.value ?? "",
+                                    TrainingRowView(title: comment.value,
                                                     exerciseCode: comment.code ?? "",
-                                                    isActiveAddRepetition: comment.addRepetion,
+                                                    isActiveAddRepetition: comment.addRepetition,
                                                     isActiveAddWeight: comment.addWeigth,
                                                     bgAppColor: bgAppColor,
                                                     color: color,
-                                                    relaxCounter: Int(comment.riposo))
+                                                    relaxCounter: comment.riposo!,
+                                                    exercize: comment)
                                 }
                             }
                             .font(.system(size: 16))
