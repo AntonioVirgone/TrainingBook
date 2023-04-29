@@ -12,8 +12,6 @@ struct ReportCardView: View {
     let title: String
     let textColor: Color
     
-    let bgColor = Color(#colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1843137255, alpha: 1))
-
     var body: some View {
         VStack(spacing: 10) {
             Text("\(count)")
@@ -24,7 +22,7 @@ struct ReportCardView: View {
                 .foregroundColor(textColor)
         }
         .frame(width: 110, height: 75)
-        .background(bgColor)
+        .background(bgCardColor)
         .cornerRadius(10)
         .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))
     }

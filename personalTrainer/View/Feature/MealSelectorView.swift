@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct MealSelectorView: View {
-    let bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
-    private let color1 = Color(#colorLiteral(red: 1, green: 0.4901960784, blue: 0.1215686275, alpha: 1))
-    private let color5 = Color(#colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1843137255, alpha: 1))
-
-    let color2 = Color(#colorLiteral(red: 1, green: 0.5764705882, blue: 0.2745098039, alpha: 1))
-    let color3 = Color(#colorLiteral(red: 0.7490196078, green: 0.9176470588, blue: 0.7254901961, alpha: 1))
-    let color4 = Color(#colorLiteral(red: 0.6784313725, green: 0.9450980392, blue: 0.9843137255, alpha: 1))
-
+    @Environment(\.dismiss) var dismiss
+        
+    @State private var showingAddBreackfast = false
+    @State private var showingAddLunch = false
+    @State private var showingAddDinner = false
+    
     var body: some View {
         ZStack {
             bgAppColor.edgesIgnoringSafeArea(.all)
@@ -25,8 +23,15 @@ struct MealSelectorView: View {
                     .background(Color.orange.opacity(0.4))
                 Spacer()
                 VStack(spacing: 15) {
+                    Image(systemName: "frying.pan")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(.white)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 60, trailing: 0))
+
                     Button {
-                        print("colazione")
+                        showingAddBreackfast.toggle()
                     } label: {
                         Text("Colazione")
                             .font(.system(size: 26, weight: .bold, design: .rounded))
@@ -36,8 +41,11 @@ struct MealSelectorView: View {
                             .cornerRadius(10)
                             .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))
                     }
+                    .sheet(isPresented: $showingAddBreackfast) {
+                        AddFoodView(title: "Colazione", dismiss: dismiss)
+                    }
                     Button {
-                        
+                        showingAddLunch.toggle()
                     } label: {
                         Text("Pranzo")
                             .font(.system(size: 26, weight: .bold, design: .rounded))
@@ -47,8 +55,11 @@ struct MealSelectorView: View {
                             .cornerRadius(10)
                             .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))
                     }
+                    .sheet(isPresented: $showingAddLunch) {
+                        AddFoodView(title: "Pranzo", dismiss: dismiss)
+                    }
                     Button {
-                        
+                        showingAddDinner.toggle()                        
                     } label: {
                         Text("Cena")
                             .font(.system(size: 26, weight: .bold, design: .rounded))
@@ -58,6 +69,10 @@ struct MealSelectorView: View {
                             .cornerRadius(10)
                             .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2))
                     }
+                    .sheet(isPresented: $showingAddDinner) {
+                        AddFoodView(title: "Cena", dismiss: dismiss)
+                    }
+                    
                 }
                 Spacer()
             }

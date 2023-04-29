@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct personalTrainerApp: App {
-    @StateObject private var dataController = RepetitionDataController()
-
     var body: some Scene {
         WindowGroup {
-//            ProfileView().environment(\.managedObjectContext, dataController.container.viewContext)
-            ContentView().environment(\.managedObjectContext, dataController.container.viewContext)
+            if loadScheda {
+                ProfileView()
+            } else {
+                ContentView()
+            }
         }
     }
 }

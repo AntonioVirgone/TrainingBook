@@ -9,10 +9,8 @@ import SwiftUI
 import NetworkPackage
 
 struct TrainingView: View {
-    @FetchRequest(sortDescriptors: []) var posts: FetchedResults<Scheda>
+    @State var posts = TrainingDataController.find()
     
-    let bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
-
     let title: String
     let type: String
     let color: Color
@@ -28,7 +26,7 @@ struct TrainingView: View {
                     ForEach(posts) { post in
                         if (post.type == type) {
                             Section(header: Text(post.title ?? "").foregroundColor(.white)) {
-                                ForEach(Array(post.relationship! as! Set<Esercizio>), id: \.self) { comment in
+                                ForEach(post.excercises, id: \.self) { comment in
                                     TrainingRowView(title: comment.value ?? "",
                                                     exerciseCode: comment.code ?? "",
                                                     isActiveAddRepetition: comment.addRepetion,

@@ -9,18 +9,22 @@ import Foundation
 import CoreData
 
 class RepetitionDataController: ObservableObject {
-    let container = NSPersistentContainer(name: "TrainerDataModel")
+    static var context: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
     
-    init() {
-        container.loadPersistentStores { desc, error in
+    static var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "TrainerDataModel")
+        container.loadPersistentStores { (description, error) in
             if let error = error {
-                print("Failed to load the data \(error.localizedDescription)")
+                print(error)
             }
         }
-    }
+        return container
+    }()
 
     // REPETITION
-    func addRepetition(number: Double, weigth: Double, trainingCode: String, context: NSManagedObjectContext) {
+    static func addRepetition(number: Double, weigth: Double, trainingCode: String) {
         let repetition = Repetition(context: context)
         repetition.id = UUID()
         repetition.date = Date()
@@ -28,10 +32,10 @@ class RepetitionDataController: ObservableObject {
         repetition.weigth = weigth
         repetition.trainingCode = trainingCode
         
-        save(context: context)
+        save()
     }
     
-    func find(context: NSManagedObjectContext) -> [Repetition] {
+    static func find() -> [Repetition] {
         let fetchRequest: NSFetchRequest<Repetition>
         fetchRequest = Repetition.fetchRequest()
         
@@ -42,7 +46,7 @@ class RepetitionDataController: ObservableObject {
         }
     }
     
-    func editRepetition(number: Double, weigth: Double, repetitionId: UUID, context: NSManagedObjectContext) {
+    static func editRepetition(number: Double, weigth: Double, repetitionId: UUID) {
         let fetchRequest: NSFetchRequest<Repetition>
         fetchRequest = Repetition.fetchRequest()
         
@@ -56,13 +60,13 @@ class RepetitionDataController: ObservableObject {
             repetition!.number = number
             repetition!.weigth = weigth
             
-            save(context: context)
+            save()
         } catch {
             print(error)
         }
     }
     
-    func deleteRepetition(repetitionId: UUID, context: NSManagedObjectContext) {
+    static func deleteRepetition(repetitionId: UUID) {
         let fetchRequest = Repetition.fetchRequest()
         
         fetchRequest.predicate = NSPredicate(
@@ -73,13 +77,13 @@ class RepetitionDataController: ObservableObject {
             let repetition = try context.fetch(fetchRequest).first
             context.delete(repetition!)
             
-            save(context: context)
+            save()
         } catch {
             print(error)
         }
     }
     
-    func save(context: NSManagedObjectContext) {
+    static func save() {
         do {
             try context.save()
             print("Data saved")

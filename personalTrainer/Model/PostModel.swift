@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct PostModel: Identifiable, Hashable, Codable {
-    let id = UUID()
+struct PostModel: Hashable, Codable {
     let title: String
     let type: String
     let excercises: [CommentModel]

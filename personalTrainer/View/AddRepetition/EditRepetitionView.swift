@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct EditRepetitionView: View {
-    let bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
     let title: String
     let isActiveAddWeight: Bool
     let repetitionId: UUID

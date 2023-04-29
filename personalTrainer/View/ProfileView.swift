@@ -9,10 +9,9 @@ import SwiftUI
 import CoreData
 
 struct ProfileView: View {
-    @State var bgAppColor = Color(#colorLiteral(red: 0.1098039216, green: 0.1176470588, blue: 0.1411764706, alpha: 1))
-    @FetchRequest(sortDescriptors: []) var posts: FetchedResults<Scheda>
-    @Environment(\.managedObjectContext) var moc
-    
+
+    @State var posts = TrainingDataController.find()
+
     var body: some View {
         ZStack {
             bgAppColor.edgesIgnoringSafeArea(.all)
@@ -21,43 +20,36 @@ struct ProfileView: View {
                 VStack(spacing: 25) {
                     HStack(spacing: 15) {
                         Button {
-                            TrainingDataController().savePost(context: moc, filename: "scheda_antonio_a.json")
+                            save(filename: "scheda_antonio_a.json")
                         } label: {
                             Text("Add Scheda A")
                         }
                         Button {
-                            TrainingDataController().savePost(context: moc, filename: "scheda_antonio_b.json")
+                            save(filename: "scheda_antonio_b.json")
                         } label: {
                             Text("Add Scheda B")
                         }
                         Button {
-                            TrainingDataController().savePost(context: moc, filename: "scheda_antonio_c.json")
+                            save(filename: "scheda_antonio_c.json")
                         } label: {
                             Text("Add Scheda C")
                         }
                     }
                     
                     Button {
-                        print("read \(posts)")
-                    } label: {
-                        Text("Read posts")
-                    }
-                    
-                    Button {
-                        print("delete")
-                        delete(context: moc, objects: posts)
+                        delete()
                     } label: {
                         Text("Delete posts")
                     }
                 }
                 List {
-                    ForEach(posts) { post in
+                    ForEach(posts, id: \.self) { post in
                         VStack {
-                            Text(post.title ?? "")
-                            ForEach(Array(post.relationship! as! Set<Esercizio>), id: \.self) { comment in
+                            Text(post.title)
+                            ForEach(post.excercises, id: \.self) { comment in
                                 VStack {
                                     Text(comment.code ?? "")
-                                    Text(comment.value ?? "")
+                                    Text(comment.value)
                                 }
                             }
                         }
@@ -67,14 +59,14 @@ struct ProfileView: View {
         }
     }
     
-    func delete(context: NSManagedObjectContext, objects: FetchedResults<Scheda>) {
-        // Delete multiple objects
-        for object in objects {
-            context.delete(object)
-        }
-        
-        // Save the deletions to the persistent store
-        //save(context: context)
+    private func save(filename: String) {
+        TrainingDataController.savePost(filename: filename)
+        posts = TrainingDataController.find()
+    }
+    
+    private func delete() {
+        TrainingDataController.delete()
+        posts = TrainingDataController.find()
     }
 }
 

@@ -12,8 +12,6 @@ struct PostCardView: View {
     let datetime: String
     let description: String
     
-    let bgColor = Color(#colorLiteral(red: 0.1607843137, green: 0.1607843137, blue: 0.1843137255, alpha: 1))
-
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -34,7 +32,7 @@ struct PostCardView: View {
             .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 0))
             Spacer()
         }
-        .background(bgColor)
+        .background(bgCardColor)
         .cornerRadius(15)
     }
 }
